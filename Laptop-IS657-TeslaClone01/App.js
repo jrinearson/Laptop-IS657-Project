@@ -1,17 +1,20 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 export default function App() {
   return (
     <View styles={styles.container}>
 
     <View styles={styles.carContainer}>
+    <ImageBackground source={require('assets\images\ModelX.jpeg')} styles={styles}
 
       <View style ={styles.titles}>
         <Text style={styles.title}>Model S</Text>
         <Text style={styles.subtitle}>Starting at $69,420</Text>
+
       </View>
+
     </View>
 
 
