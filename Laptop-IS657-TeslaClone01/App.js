@@ -8,7 +8,7 @@ export default function App() {
 
     <View styles={styles.carContainer}>
       <ImageBackground 
-      source={require('laptop-is657-teslaclone01\assets\images\modelx.jpeg')}
+      source={require('laptop-is657-teslaclone01\\assets\\images\\modelx.jpeg')}
       style={styles.image}
       />
     
