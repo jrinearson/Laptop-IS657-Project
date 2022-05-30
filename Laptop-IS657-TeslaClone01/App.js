@@ -7,9 +7,7 @@ export default function App() {
     <View styles={styles.container}>
 
     <View styles={styles.carContainer}>
-    <ImageBackground 
-      source={require('laptop-is657-teslaclone01\assets\images\modelx.jpeg')} 
-      styles={styles.image}/>
+    
 
       <View style ={styles.titles}>
         <Text style={styles.title}>Model S</Text>
