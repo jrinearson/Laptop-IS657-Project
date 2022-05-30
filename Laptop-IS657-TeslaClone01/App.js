@@ -1,15 +1,19 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
     <View styles={styles.container}>
 
     <View styles={styles.carContainer}>
+      <ImageBackground 
+      source={require('laptop-is657-teslaclone01\assets\images\modelx.jpeg')}
+      style={styles.image}
+      />
     
 
-      <View style ={styles.titles}>
+      <View style={styles.titles}>
         <Text style={styles.title}>Model S</Text>
         <Text style={styles.subtitle}>Starting at $69,420</Text>
 
@@ -61,7 +65,9 @@ const styles = StyleSheet.create({
    image: {
      width: '100%',
      height: '100%',
-   }
+     resizeMode: 'cover',
+     position: 'absolute',
+   },
 
 
 
