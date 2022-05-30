@@ -7,13 +7,16 @@ export default function App() {
     <View styles={styles.container}>
 
     <View styles={styles.carContainer}>
-    <ImageBackground source={require('assets\images\ModelX.jpeg')} styles={styles}
+    <ImageBackground 
+      source={require('./assets/images/ModelX.jpeg')} 
+      styles={styles.image}/>
 
       <View style ={styles.titles}>
         <Text style={styles.title}>Model S</Text>
         <Text style={styles.subtitle}>Starting at $69,420</Text>
 
       </View>
+    
 
     </View>
 
@@ -55,7 +58,13 @@ const styles = StyleSheet.create({
    subtitle: {
      fontSize: 16,
      color: '#5C5E62'
+   },
+
+   image: {
+     width: '100%',
+     height: '100%',
    }
+
 
 
 });
