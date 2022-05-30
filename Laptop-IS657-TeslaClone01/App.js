@@ -8,7 +8,7 @@ export default function App() {
 
     <View styles={styles.carContainer}>
     <ImageBackground 
-      source={require('./assets/images/ModelX.jpeg')} 
+      source={require('\assets\images\ModelX.jpeg')} 
       styles={styles.image}/>
 
       <View style ={styles.titles}>
