@@ -9,11 +9,14 @@ export default function App() {
         
 
         <View styles={styles.carContainer}>
+
+          {/*Sets the background to a picture of a Model X*/}
           <ImageBackground 
           source={require('./assets/images/modelx.jpeg')} 
           style={styles.image}
         />
 
+        {/*Adds titles*/}
         <View style={styles.titles}>
           <Text style={styles.title}>Model X</Text>
           <Text style={styles.subtitle}>Starting at $69,420</Text>
@@ -62,7 +65,7 @@ const styles = StyleSheet.create({
    image: {
      width: '100%',
      height: '200%',
-     resizeMode: 'contain',
+     resizeMode: 'cover',
      position: 'absolute',
    },
 
