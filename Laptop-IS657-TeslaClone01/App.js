@@ -4,25 +4,21 @@ import { ImageBackground, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
+    
     <View styles={styles.container}>
+        
 
-    <View styles={styles.carContainer}>
-      <ImageBackground 
-      source={require('C:\\IS 657\\Laptop-IS657-Project\\Laptop-IS657-TeslaClone01\\assets\\images\\ModelX.jpeg')}
-      style={styles.image}
-      />
-    
+        <View styles={styles.carContainer}>
+          <ImageBackground 
+          source={require('./assets/images/modelx.jpeg')} 
+          style={styles.image}
+        />
 
-      <View style={styles.titles}>
-        <Text style={styles.title}>Model S</Text>
-        <Text style={styles.subtitle}>Starting at $69,420</Text>
-
+        <View style={styles.titles}>
+          <Text style={styles.title}>Model X</Text>
+          <Text style={styles.subtitle}>Starting at $69,420</Text>
+        </View>
       </View>
-    
-
-    </View>
-
-
 
       <StatusBar style="auto" />
     </View>
@@ -34,12 +30,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   carContainer: {
     width: '100%',
     height: '100%',
+    
 
   },
 
@@ -64,11 +61,9 @@ const styles = StyleSheet.create({
 
    image: {
      width: '100%',
-     height: '100%',
-     resizeMode: 'cover',
+     height: '200%',
+     resizeMode: 'contain',
      position: 'absolute',
    },
-
-
 
 });
