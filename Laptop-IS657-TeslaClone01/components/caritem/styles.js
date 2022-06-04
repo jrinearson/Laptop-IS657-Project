@@ -4,22 +4,26 @@ const styles = StyleSheet.create({
     carContainer: {
       width: '100%',
       height: '100%',
-      
-  
     },
   
     titles: {
-      marginTop: '30%',
+      marginTop: '20%',
       width: '100%',
       alignItems: 'center',
-  
-  
+      
     },
-  
+
      title: {
        fontSize: 40,
        fontWeight: '500',
   
+     },
+
+     subtitleCTA: {
+      fontSize: 16,
+      color: '#5C5E62',
+      textDecorationLine: 'underline'
+
      },
   
      subtitle: {
@@ -28,11 +32,18 @@ const styles = StyleSheet.create({
      },
   
      image: {
-       width: 390,
-       height: 844,
+       width: '100%',
+       height: '200%',
        resizeMode: 'contain',
        position: 'absolute',
      },
+
+     buttonsContainer: {
+       position: 'absolute',   
+       width: '100%',
+       bottom: 50,
+     }
+
   
   });
 

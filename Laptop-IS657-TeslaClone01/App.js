@@ -8,7 +8,11 @@ export default function App() {
     
     <View styles={styles.container}>
 
-      <CarItem/>
+      <CarItem
+      name={'Model X'}
+      tagline={'Order Online For'}
+      taglineCTA={'Touchless Delivery '}
+      image={require('./assets/images/modelx.jpeg')}/>
 
       <StatusBar style="auto" />
     </View>
@@ -18,9 +22,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    //backgroundColor: '#fff',
+    //alignItems: 'center',
+    //justifyContent: 'center'
   },
 
 });
