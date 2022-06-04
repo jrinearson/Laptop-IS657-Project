@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
      },
   
      image: {
-       width: '101%',
-       height: '220%',
+       width: '100%',
+       height: '200%',
        resizeMode: 'cover',
        position: 'absolute',
      },
