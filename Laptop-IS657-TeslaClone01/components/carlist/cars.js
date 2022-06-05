@@ -16,7 +16,7 @@ export default
   name: 'Model X',
   tagline: 'Order Online for',
   taglineCTA: 'Touchless Delivery',
-  image: require('../../assets/images/modelx.jpeg'),
+  image: require('../../assets/images/ModelX.jpeg'),
 }, 
 {
   name: 'Model Y',
