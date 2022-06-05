@@ -1,7 +1,7 @@
-import React from 'react';  
+import React from 'react';
 import { View, Text, ImageBackground } from 'react-native';
-import StyledButton from '../StyledButton';
-import styles from './styles'
+import StyledButton from "../StyledButton";
+import styles from './styles';
 
 const CarItem = (props) => {
 
