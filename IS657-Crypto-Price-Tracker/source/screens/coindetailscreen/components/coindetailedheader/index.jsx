@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image } from 'react-native';
 import { Ionicons, EvilIcons } from '@expo/vector-icons';
-import styles from '../styles'
+import styles from './styles'
 
 function CoinDetailHeader(props) {
 
