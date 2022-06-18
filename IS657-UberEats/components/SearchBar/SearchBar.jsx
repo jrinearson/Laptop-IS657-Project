@@ -31,8 +31,8 @@ function SearchBar() {
         )}
         renderRightButton={() => (
           <View style={styles.searchRightButton}>
-            <AntDesign name="clockcircle" size={11}/>
-            <Text>Search</Text>
+            {/* <AntDesign name="clockcircle" size={11}/>
+            <Text>Search</Text> */}
           </View>
         )}
       />

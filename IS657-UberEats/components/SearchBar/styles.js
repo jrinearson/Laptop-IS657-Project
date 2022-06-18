@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     searchRightButton: {
         flexDirection: 'row',
         marginRight: 10,
-        backgroundColor: 'white',
+        //backgroundColor: 'white',
         padding: 6,
         alignItems: 'center',
         borderRadius: 30,
