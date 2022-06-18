@@ -40,7 +40,7 @@ function HeaderButton(props) {
         style={{
           color: props.activeTab === props.text ? 'white' : 'black',
           fontSize: 15,
-          fontWeight: "bold",
+          fontWeight: '700',
         }}
       >
         {props.text}
