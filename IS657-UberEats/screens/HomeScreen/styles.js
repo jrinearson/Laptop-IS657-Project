@@ -1,10 +1,14 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create ({
-    header: {
-        backgroundColor: '#eee'
+    safeArea: {
+        backgroundColor: '#eee',
     },
 
+    header: {
+        backgroundColor: 'white',
+        padding: 15,
+    },
 });
 
 export default styles;
