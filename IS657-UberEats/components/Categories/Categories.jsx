@@ -1,5 +1,6 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import React from "react";
+import styles from "./styles";
 
 const items = [
   {
@@ -8,11 +9,11 @@ const items = [
   },
   {
     image: require("../../assets/images/bread.png"),
-    text: "Bakery Items",
+    text: "Bakery",
   },
   {
     image: require("../../assets/images/coffee.png"),
-    text: "Coffee & Tea",
+    text: "Coffee",
   },
   {
     image: require("../../assets/images/deals.png"),
@@ -34,9 +35,36 @@ const items = [
 
 function Categories() {
   return (
-    <View>
-      <Text>Categories</Text>
-    </View>
+    <ScrollView horizontal>
+      <View style={styles.categoryContainer}>
+        <Image style={styles.categoryImage} source={items[0].image} />
+        <Text style={styles.categoryText}>{items[0].text}</Text>
+      </View>
+      <View style={styles.categoryContainer}>
+        <Image style={styles.categoryImage} source={items[1].image} />
+        <Text style={styles.categoryText}>{items[1].text}</Text>
+      </View>
+      <View style={styles.categoryContainer}>
+        <Image style={styles.categoryImage} source={items[2].image} />
+        <Text style={styles.categoryText}>{items[2].text}</Text>
+      </View>
+      <View style={styles.categoryContainer}>
+        <Image style={styles.categoryImage} source={items[3].image} />
+        <Text style={styles.categoryText}>{items[3].text}</Text>
+      </View>
+      <View style={styles.categoryContainer}>
+        <Image style={styles.categoryImage} source={items[4].image} />
+        <Text style={styles.categoryText}>{items[4].text}</Text>
+      </View>
+      <View style={styles.categoryContainer}>
+        <Image style={styles.categoryImage} source={items[5].image} />
+        <Text style={styles.categoryText}>{items[5].text}</Text>
+      </View>
+      <View style={styles.categoryContainer}>
+        <Image style={styles.categoryImage} source={items[6].image} />
+        <Text style={styles.categoryText}>{items[6].text}</Text>
+      </View>
+    </ScrollView>
   );
 }
 
