@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create ({
     safeArea: {
-       backgroundColor: '#eee',
+       backgroundColor: 'white',
     },
 
     header: {

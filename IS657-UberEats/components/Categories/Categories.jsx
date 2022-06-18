@@ -36,14 +36,18 @@ const items = [
 function Categories() {
   return (
     <View>
-    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-      {items.map((item, index) => (
-        <View key={index} style={styles.categoryContainer}>
-          <Image style={styles.categoryImage} source={item.image} />
-          <Text style={styles.categoryText}>{item.text}</Text>
-        </View>
-      ))}
-    </ScrollView>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        {items.map((item, index) => (
+          <View key={index} style={styles.categoryContainer}>
+            <View style={styles.categoryImageContainer}>
+              <Image style={styles.categoryImage} source={item.image} />
+            </View>
+            <View>
+              <Text style={styles.categoryText}>{item.text}</Text>
+            </View>
+          </View>
+        ))}
+      </ScrollView>
     </View>
   );
 }

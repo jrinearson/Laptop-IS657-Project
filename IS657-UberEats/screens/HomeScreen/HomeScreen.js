@@ -4,6 +4,7 @@ import HeaderTabs from "../../components/HeaderTab/HeaderTabs";
 import styles from "./styles";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Categories from "../../components/Categories/Categories";
+import RestaurantItem from "../../components/RestaurantItem/RestaurantItem";
 
 function HomeScreen() {
   return (
@@ -13,6 +14,7 @@ function HomeScreen() {
         <SearchBar />
       </View>
       <Categories />
+      <RestaurantItem />
     </SafeAreaView>
   );
 }
