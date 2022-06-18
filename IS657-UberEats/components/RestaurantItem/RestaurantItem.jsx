@@ -27,15 +27,15 @@ const RestaurantImage = () => (
 );
 
 const RestaurantInfo = () => (
-  <View style={styles.restaurantInfoContainer}>
-    <View style={styles.restaurantNameText}>
-      <Text>JOEY DTLA</Text>
+  <View>
+    <View style={styles.restaurantTitle}>
+      <Text style={styles.name}>JOEY DTLA</Text>
+      <Text style={styles.rating}>4.7</Text>
     </View>
-    <View style={styles.restaurantTimeText}>
-      <Text>30-45 min</Text>
-    </View>
-    <View style={styles.restaurantRatingText}>
-      <Text>4.7</Text>
+    <View style={styles.restaurantSubtitle}>
+      <Text>$3.99 Delivery Fee</Text>
+      <Text>25-40 min</Text>
+      
     </View>
   </View>
 );

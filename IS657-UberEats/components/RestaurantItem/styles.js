@@ -16,23 +16,38 @@ const styles = StyleSheet.create({
         top: 10,
     },
 
-    restaurantInfoContainer: {
+    restaurantTitle: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        margin: 10
+        marginHorizontal: 10,
+        marginTop: 10,
+        marginBottom: 2,
+    },
+    restaurantSubtitle: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginHorizontal: 10,
+        marginTop: 0
     },
 
-    restaurantNameText: {
-        
+
+
+    name: {
+        fontSize: 17,
+        fontWeight: '500',
+        letterSpacing: 0.5  
     },
 
-    restaurantTimeText: {
-        
+    deliveryTime: {
+        fontSize: 15,
+        fontWeight: 'bold',
     },
 
-    restaurantRatingText: {
-        
+    rating: {
+        fontSize: 15,
+        fontWeight: '500',
     },
 
 });
