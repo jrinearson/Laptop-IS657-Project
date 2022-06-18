@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
 
     header : {
         padding: 15,
- 
     },
 
     name: {
@@ -44,9 +43,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginRight: 5,
         justifyContent: 'center'
-      }
-
-
+    },
 
 });
 
