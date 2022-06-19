@@ -15,7 +15,7 @@ function SearchBar({cityHandler}) {
         const city = data.description.split(','[0]);
         cityHandler(city);
       }}
-        placeholder="Glendale, CA"
+        placeholder="Search 🍜"
         styles={{
           textInput: {
             backgroundColor: "#eee",
