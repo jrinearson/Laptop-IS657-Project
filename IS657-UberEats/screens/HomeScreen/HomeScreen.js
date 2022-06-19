@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import HeaderTabs from "../../components/HeaderTab/HeaderTabs";
 import styles from "./styles";
@@ -6,6 +6,8 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import Categories from "../../components/Categories/Categories";
 import RestaurantItems from "../../components/RestaurantItems/RestaurantItems";
 import { restaurants } from "../../components/RestaurantItems/RestaurantItems";
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { Divider } from 'react-native-elements';
 
 const YELP_API_KEY =
   "CKyMAwD-KDXLWtFEPB8us-6hKZIjq3FJkETeyZkOtKvI0VYQyE0MnulRxglSquTltNYjDi2vyzAoKF3eWqipKCqu205pQi72l54fNmRsuLCgME4_OtqaX_iACHauYnYx";
@@ -46,6 +48,7 @@ function HomeScreen() {
         <Categories />
         <RestaurantItems restaurantData={restaurantData} />
       </ScrollView>
+      <Divider width={1} />
     </SafeAreaView>
   );
 }
