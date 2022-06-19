@@ -1,9 +1,18 @@
 import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
-    imageContainer: {
-        
+
+    touchableOpacityContainer: {
+        marginBottom: 30
+
     },
+
+    restaurantItemContainer: {
+        marginTop: 10,
+        paddingHorizontal: 15,
+        marginBottom: 30
+
+    }, 
 
     image: {
         width: '100%',
@@ -20,7 +29,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginHorizontal: 10,
         marginTop: 10,
         marginBottom: 2,
     },
@@ -28,7 +36,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginHorizontal: 10,
         marginTop: 0
     },
 

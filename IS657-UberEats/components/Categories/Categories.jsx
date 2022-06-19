@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import React from "react";
 import styles from "./styles";
 
@@ -39,9 +39,11 @@ function Categories() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {items.map((item, index) => (
           <View key={index} style={styles.categoryContainer}>
-            <View style={styles.categoryImageContainer}>
-              <Image style={styles.categoryImage} source={item.image} />
-            </View>
+            <TouchableOpacity>
+              <View style={styles.categoryImageContainer}>
+                <Image style={styles.categoryImage} source={item.image} />
+              </View>
+            </TouchableOpacity>
             <View>
               <Text style={styles.categoryText}>{item.text}</Text>
             </View>

@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 
     categoryContainer: {
         alignItems: 'center',
-        marginHorizontal: 10,
+        marginLeft: 15,
         marginVertical: 10,
 
     },

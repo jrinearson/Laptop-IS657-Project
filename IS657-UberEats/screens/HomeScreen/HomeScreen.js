@@ -1,20 +1,25 @@
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import HeaderTabs from "../../components/HeaderTab/HeaderTabs";
 import styles from "./styles";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Categories from "../../components/Categories/Categories";
-import RestaurantItem from "../../components/RestaurantItem/RestaurantItem";
+import RestaurantItems from "../../components/RestaurantItems/RestaurantItems";
 
 function HomeScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.header}>
-        <HeaderTabs />
-        <SearchBar />
-      </View>
-      <Categories />
-      <RestaurantItem />
+      <ScrollView vertical showsVerticalScrollIndicator={false}>
+        <View style={styles.header}>
+          <HeaderTabs />
+          <SearchBar />
+        </View>
+
+        <Categories />
+
+        <RestaurantItems />
+
+      </ScrollView>
     </SafeAreaView>
   );
 }
