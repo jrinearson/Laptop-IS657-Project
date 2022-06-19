@@ -9,6 +9,11 @@ function SearchBar() {
   return (
     <View style={styles.search}>
       <GooglePlacesAutocomplete
+      query={{key: 'AIzaSyAHUzjOlUZ7nbD_Am53m8Y0zNU7vQWO8es'}}
+      onPress={(data, details = null) => {
+        console.log(data.description)
+        const city = data.description.split(','[0])
+      }}
         placeholder="Search"
         styles={{
           textInput: {
