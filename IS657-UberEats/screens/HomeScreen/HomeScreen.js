@@ -1,14 +1,14 @@
 import { View, ScrollView, Text } from "react-native";
 import React, { useEffect, useState } from "react";
-import HeaderTabs from "../../components/HeaderTab/HeaderTabs";
-import styles from "./styles";
-import SearchBar from "../../components/SearchBar/SearchBar";
-import Categories from "../../components/Categories/Categories";
-import RestaurantItems from "../../components/RestaurantItems/RestaurantItems";
-import { restaurants } from "../../components/RestaurantItems/RestaurantItems";
+import HeaderTabs from "../../components/HomeScreenComponents/HeaderTab/HeaderTabs";
+import styles from './styles';
+import SearchBar from "../../components/HomeScreenComponents/SearchBar/SearchBar";
+import Categories from "../../components/HomeScreenComponents/Categories/Categories";
+import RestaurantItems from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems";
+import { restaurants } from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems";
 import { SafeAreaView } from "react-native";
 import { Divider } from "react-native-elements";
-import BottomTabs from "../../components/BottomTabs/BottomTabs";
+import BottomTabs from "../../components/HomeScreenComponents/BottomTabs/BottomTabs";
 
 
 

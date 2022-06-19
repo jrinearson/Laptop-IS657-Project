@@ -9,7 +9,6 @@ const styles = StyleSheet.create ({
     header: {
         backgroundColor: 'white',
         padding: 15,
-        
     },
 });
 

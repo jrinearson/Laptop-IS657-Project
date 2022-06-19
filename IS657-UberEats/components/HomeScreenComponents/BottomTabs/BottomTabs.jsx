@@ -50,5 +50,4 @@ function BottomTabs() {
   );
 }
 
-
 export default BottomTabs;
