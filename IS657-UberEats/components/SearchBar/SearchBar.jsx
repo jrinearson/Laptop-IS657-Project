@@ -5,14 +5,15 @@ import styles from "./styles";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
 
 
-function SearchBar() {
+function SearchBar({cityHandler}) {
   return (
     <View style={styles.search}>
       <GooglePlacesAutocomplete
       query={{key: 'AIzaSyAHUzjOlUZ7nbD_Am53m8Y0zNU7vQWO8es'}}
       onPress={(data, details = null) => {
-        console.log(data.description)
-        const city = data.description.split(','[0])
+        console.log(data.description);
+        const city = data.description.split(','[0]);
+        cityHandler(city);
       }}
         placeholder="Search"
         styles={{
@@ -36,8 +37,6 @@ function SearchBar() {
         )}
         renderRightButton={() => (
           <View style={styles.searchRightButton}>
-            {/* <AntDesign name="clockcircle" size={11}/>
-            <Text>Search</Text> */}
           </View>
         )}
       />

@@ -12,10 +12,11 @@ const YELP_API_KEY =
 
 function HomeScreen() {
   const [restaurantData, setRestaurantData] = useState(restaurants);
+  const [city, setCity] = useState("Glendale")
 
   async function GetRestaurantsFromYelp() {
     const YELP_URL =
-      "https://api.yelp.com/v3/businesses/search?term=restaurants&location=Glendale";
+      `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
 
     const API_OPTIONS = {
       headers: {
@@ -25,19 +26,19 @@ function HomeScreen() {
     const res = await fetch(YELP_URL, API_OPTIONS);
     const json = await res.json();
     return setRestaurantData(json.businesses);
-  };
+  }
 
   useEffect(() => {
     GetRestaurantsFromYelp();
-  }, []);
+  }, [city]);
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <View style={styles.header}>
+        <HeaderTabs />
+        <SearchBar cityHandler={setCity}/>
+      </View>
       <ScrollView vertical showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <HeaderTabs />
-          <SearchBar />
-        </View>
         <Categories />
         <RestaurantItems restaurantData={restaurantData} />
       </ScrollView>
