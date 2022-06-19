@@ -4,8 +4,8 @@ import styles from './styles'
 
 function BottomTabs() {
   return (
-    <View>
-      <Text>BottomTabs</Text>
+    <View style={styles.tabContainer}>
+      <Text style={styles.text}>HEY</Text>
     </View>
   )
 };
