@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 export const restaurants = [
   {
     name: "",
-    image_url: "",
+    image_url: "https://dummyurl.com",
     categories: [],
     price: "",
     review_count: "",
@@ -53,7 +53,7 @@ const RestaurantInfo = (props) => (
   <View>
     <View style={styles.restaurantTitle}>
       <Text style={styles.name}>{props.name}</Text>
-      <Text style={styles.rating}>{props.rating.toFixed(1)}</Text>
+      <Text style={styles.rating}>{Number(props.rating).toFixed(1)}</Text>
     </View>
     <View style={styles.restaurantSubtitle}>
       <Text>{props.reviews} Reviews</Text>
