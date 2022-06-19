@@ -3,16 +3,7 @@ import React from "react";
 import styles from "./styles";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-export const restaurants = [
-  {
-    name: "",
-    image_url: "https://dummyurl.com",
-    categories: [],
-    price: "",
-    review_count: "",
-    rating: "",
-  },
-];
+export const restaurants = [];
 
 function RestaurantItems(props) {
   return (
@@ -26,11 +17,14 @@ function RestaurantItems(props) {
           <RestaurantInfo
             name={restaurant.name}
             rating={restaurant.rating}
-            reviews={restaurant.review_count}
             price={restaurant.price}
+            review_count={restaurant.review_count}
+            category={restaurant.categories[0].title}
+            location={restaurant.location.city}
           />
         </View>
       ))}
+    
     </TouchableOpacity>
   );
 }
@@ -52,12 +46,16 @@ const RestaurantImage = (props) => (
 const RestaurantInfo = (props) => (
   <View>
     <View style={styles.restaurantTitle}>
-      <Text style={styles.name}>{props.name}</Text>
+      <Text numberOfLines={1} style={styles.name}>{props.name}</Text>
       <Text style={styles.rating}>{Number(props.rating).toFixed(1)}</Text>
     </View>
     <View style={styles.restaurantSubtitle}>
-      <Text>{props.reviews} Reviews</Text>
+      <Text>{props.category}</Text>
       <Text>{props.price}</Text>
+    </View>
+    <View style={styles.restaurantSubtitle}>
+    <Text>{props.review_count} Reviews</Text>
+    <Text>{props.location}</Text> 
     </View>
   </View>
 );

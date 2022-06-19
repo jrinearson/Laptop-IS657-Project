@@ -39,12 +39,11 @@ const styles = StyleSheet.create({
         marginTop: 0
     },
 
-
-
     name: {
         fontSize: 17,
         fontWeight: '500',
-        letterSpacing: 0.5  
+        letterSpacing: 0.5,
+        flex: 1
     },
 
     deliveryTime: {
