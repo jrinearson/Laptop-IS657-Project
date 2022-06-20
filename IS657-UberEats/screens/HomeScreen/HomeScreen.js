@@ -2,7 +2,7 @@ import { View, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native";
 import { Divider } from "react-native-elements";
-import styles from './styles';
+import styles from "./styles";
 import { restaurants } from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems.jsx";
 import HeaderTabs from "../../components/HomeScreenComponents/HeaderTab/HeaderTabs.jsx";
 import SearchBar from "../../components/HomeScreenComponents/SearchBar/SearchBar.jsx";
@@ -10,12 +10,10 @@ import Categories from "../../components/HomeScreenComponents/Categories/Categor
 import RestaurantItems from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems.jsx";
 import BottomTabs from "../../components/HomeScreenComponents/BottomTabs/BottomTabs.jsx";
 
-
-
 const YELP_API_KEY =
   "CKyMAwD-KDXLWtFEPB8us-6hKZIjq3FJkETeyZkOtKvI0VYQyE0MnulRxglSquTltNYjDi2vyzAoKF3eWqipKCqu205pQi72l54fNmRsuLCgME4_OtqaX_iACHauYnYx";
 
-function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   const [restaurantData, setRestaurantData] = useState(restaurants);
   const [city, setCity] = useState("Glendale");
   const [activeTab, setActiveTab] = useState("Delivery");
@@ -43,19 +41,19 @@ function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      
       <View style={styles.header}>
         <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <SearchBar cityHandler={setCity} />
       </View>
       <ScrollView vertical showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItems restaurantData={restaurantData} />
+        <RestaurantItems
+          restaurantData={restaurantData}
+          navigation={navigation}
+        />
       </ScrollView>
       <Divider width={1} />
       <BottomTabs />
     </SafeAreaView>
   );
 }
-
-export default HomeScreen;

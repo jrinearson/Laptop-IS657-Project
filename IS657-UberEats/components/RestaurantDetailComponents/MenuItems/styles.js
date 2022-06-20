@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     descriptionContainer: {
         paddingBottom: 12.5
     },
+
 });
 
 export default styles;

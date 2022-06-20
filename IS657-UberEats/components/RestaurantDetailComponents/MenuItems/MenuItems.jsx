@@ -44,7 +44,7 @@ export default function MenuItems() {
       {foods.map((food, index) => (
         <View key={index}>
           <FoodInfo food={food} />
-          <Divider width={0.5} />
+          <Divider width={0.5} style={{marginHorizontal: '5%'}}/>
         </View>
         
       ))}
