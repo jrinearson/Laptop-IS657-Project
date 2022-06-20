@@ -7,7 +7,7 @@ export default function About(props) {
   const { name, image, price, reviews, rating, categories } =
     props.route.params;
 
-  const description = `${categories} ${price ? "• " + price : ""} • ${rating}⭐ \n(${reviews}+ Reviews 😋)`;
+  const description = `${categories} ${price ? "• " + price : ""} • ${rating}🌟 • ${reviews} Reviews`;
 
   return (
     <View>
