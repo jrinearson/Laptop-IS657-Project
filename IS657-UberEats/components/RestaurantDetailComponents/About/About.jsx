@@ -15,44 +15,34 @@ const yelpRestaurantInfo = {
 
 const { name, image, price, reviews, rating, categories } = yelpRestaurantInfo;
 
-const formattedCategories = categories.map((cat) => cat.title).join("c");
+const formattedCategories = categories.map((cat) => cat.title).join(" • ");
 
-const description = `${formattedCategories} + ${
+const description = `${formattedCategories}${
   price ? " • " + price : ""
-} • 🎟 • ${rating} 🌟 ${reviews}+`;
+} • ${rating} 🌟 ${reviews}+`;
 
-const restaurantImage =
-  "https://d1ralsognjng37.cloudfront.net/e5e57bed-2612-466a-977a-d10f653aa04b.jpeg";
-const title = "Morrison Atwater Village";
-const info = "Gastropub • Craft Burgers 🍔 • $$ • 4.5🌟 (5335+)";
-
-const RestaurantImage = (props) => (
-  <Image
-    source={{ uri: props.restaurantImage }}
-    style={styles.restaurantImage}
-  />
-);
-
-const RestaurantTitle = (props) => (
-  <Text style={styles.title}>{props.title}</Text>
-);
-
-const RestaurantDescription = (props) => (
-  <Text style={styles.description}>{props.title}</Text>
-);
-
-function About() {
+export default function About() {
   return (
     <View>
-      <RestaurantImage image={restaurantImage} />
+      <RestaurantImage image={image} />
       <View style={styles.titleContainer}>
-        <RestaurantTitle title={title} />
+        <RestaurantName name={name} />
       </View>
       <View style={styles.descriptionContainer}>
-        <RestaurantDescription title={info} />
+        <RestaurantDescription description={description} />
       </View>
     </View>
   );
 }
 
-export default About;
+const RestaurantImage = (props) => (
+  <Image source={{ uri: props.image }} style={styles.restaurantImage} />
+);
+
+const RestaurantName = (props) => (
+  <Text style={styles.title}>{props.name}</Text>
+);
+
+const RestaurantDescription = (props) => (
+  <Text style={styles.description}>{props.description}</Text>
+);
