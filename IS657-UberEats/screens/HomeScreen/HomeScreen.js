@@ -1,14 +1,14 @@
-import { View, ScrollView, Text } from "react-native";
+import { View, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
-import HeaderTabs from "../../components/HomeScreenComponents/HeaderTab/HeaderTabs";
-import styles from './styles';
-import SearchBar from "../../components/HomeScreenComponents/SearchBar/SearchBar";
-import Categories from "../../components/HomeScreenComponents/Categories/Categories";
-import RestaurantItems from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems";
-import { restaurants } from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems";
 import { SafeAreaView } from "react-native";
 import { Divider } from "react-native-elements";
-import BottomTabs from "../../components/HomeScreenComponents/BottomTabs/BottomTabs";
+import styles from './styles';
+import { restaurants } from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems.jsx";
+import HeaderTabs from "../../components/HomeScreenComponents/HeaderTab/HeaderTabs.jsx";
+import SearchBar from "../../components/HomeScreenComponents/SearchBar/SearchBar.jsx";
+import Categories from "../../components/HomeScreenComponents/Categories/Categories.jsx";
+import RestaurantItems from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems.jsx";
+import BottomTabs from "../../components/HomeScreenComponents/BottomTabs/BottomTabs.jsx";
 
 
 
