@@ -1,6 +1,7 @@
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import React from "react";
 import styles from "./styles";
+import { Divider } from "react-native-elements";
 
 const foods = [
   {
@@ -23,7 +24,7 @@ const foods = [
     title: "Rib Eye Steak",
     description:
       "Half pound rib eye steak (enjoyed best medium rare or medium), side of mashed potatoes",
-    price: "27.00",
+    price: "$27.00",
     image:
       "https://s3-media0.fl.yelpcdn.com/bphoto/8fJF2G52Y9XhUsNvi5SsvQ/o.jpg",
   },
@@ -31,7 +32,7 @@ const foods = [
     title: "Onion Rings",
     description:
       "Homemade beer batter, hand-cut onion rings, house crafted bbq sauce ",
-    price: "10.00",
+    price: "$10.00",
     image:
       "https://s3-media0.fl.yelpcdn.com/bphoto/2XlMm1ZoA7yx8GmYCL9iPw/o.jpg",
   },
@@ -43,7 +44,9 @@ export default function MenuItems() {
       {foods.map((food, index) => (
         <View key={index}>
           <FoodInfo food={food} />
+          <Divider width={0.5} />
         </View>
+        
       ))}
     </ScrollView>
   );

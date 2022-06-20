@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 15,
         width: '100%',
-        
     },
 
     foodPicture: {
@@ -19,8 +18,7 @@ const styles = StyleSheet.create({
     },
 
     titleContainer: {
-        paddingBottom: 5
-
+        paddingVertical: 12.5
     },
 
     titleText: {
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
     },
 
     descriptionContainer: {
-        paddingBottom: 25
+        paddingBottom: 12.5
     },
 });
 
