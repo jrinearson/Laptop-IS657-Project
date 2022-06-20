@@ -53,10 +53,12 @@ export default function MenuItems() {
 }
 
 const FoodInfo = (props) => (
-  <TouchableOpacity>
+  
     <View style={styles.menuItemContainer}>
       <View style={styles.titleContainer}>
+      <TouchableOpacity>
         <Text style={styles.titleText}>{props.food.title}</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.priceContainer}>
         <Text>{props.food.price}</Text>
@@ -65,5 +67,5 @@ const FoodInfo = (props) => (
         <Text>{props.food.description}</Text>
       </View>
     </View>
-  </TouchableOpacity>
+  
 );

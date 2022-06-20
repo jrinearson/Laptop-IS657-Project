@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     },
 
     titleContainer: {
-        paddingVertical: 12.5
+        paddingTop: 12.5
     },
 
     titleText: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     },
 
     priceContainer: {
-        paddingBottom: 5
+        paddingVertical: 5
     },
 
     descriptionContainer: {
