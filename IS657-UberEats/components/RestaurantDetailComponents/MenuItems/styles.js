@@ -2,13 +2,23 @@ import { StyleSheet, Dimenions, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
     screen: {
-        height: Dimensions.get('screen').height
+        height: Dimensions.get('screen').height,
+        
     },   
+
+    foodItemContainer: {
+        
+        flexDirection: 'row',
+        marginHorizontal: 15,
+        marginBottom: 30
+
+    },
 
     menuItemContainer: {
         justifyContent: 'space-between',
-        paddingHorizontal: 15,
-        width: '100%',
+        flex: 1,
+        
+        
     },
 
     foodPicture: {
@@ -18,7 +28,7 @@ const styles = StyleSheet.create({
     },
 
     titleContainer: {
-        paddingTop: 12.5
+        paddingTop: 0
     },
 
     titleText: {
@@ -30,9 +40,6 @@ const styles = StyleSheet.create({
         paddingVertical: 5
     },
 
-    descriptionContainer: {
-        paddingBottom: 12.5
-    },
 
 });
 

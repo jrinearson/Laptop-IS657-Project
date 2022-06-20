@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 25,
+        fontSize: 20,
         fontWeight: '700',
         letterSpacing: 0,
     },
