@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
 
     touchableOpacityContainer: {
-        marginBottom: 30
 
     },
 

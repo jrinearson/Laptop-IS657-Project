@@ -2,31 +2,33 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import styles from "./styles";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Divider } from 'react-native-elements';
+import { Divider } from "react-native-elements";
 
 export const restaurants = [];
 
-function RestaurantItems(props) {
+function RestaurantItems({ navigation, ...props }) {
   return (
-    <TouchableOpacity
-      activeOpacity={1}
-      style={styles.touchableOpacityContainer}
-    >
+    <>
       {props.restaurantData.map((restaurant, index) => (
-        <View key={index} style={styles.restaurantItemContainer}>
-          <RestaurantImage image={restaurant.image_url} />
-          <RestaurantInfo
-            name={restaurant.name}
-            rating={restaurant.rating}
-            price={restaurant.price}
-            review_count={restaurant.review_count}
-            category={restaurant.categories[0].title}
-            location={restaurant.location.city}
-          />
-        </View>
+        <TouchableOpacity
+          activeOpacity={1}
+          style={styles.touchableOpacityContainer}
+          onPress={() => navigation.navigate('RestaurantDetail')}
+        >
+          <View key={index} style={styles.restaurantItemContainer}>
+            <RestaurantImage image={restaurant.image_url} />
+            <RestaurantInfo
+              name={restaurant.name}
+              rating={restaurant.rating}
+              price={restaurant.price}
+              review_count={restaurant.review_count}
+              category={restaurant.categories[0].title}
+              location={restaurant.location.city}
+            />
+          </View>
+        </TouchableOpacity>
       ))}
-    
-    </TouchableOpacity>
+    </>
   );
 }
 
@@ -47,7 +49,9 @@ const RestaurantImage = (props) => (
 const RestaurantInfo = (props) => (
   <View>
     <View style={styles.restaurantTitle}>
-      <Text numberOfLines={1} style={styles.name}>{props.name}</Text>
+      <Text numberOfLines={1} style={styles.name}>
+        {props.name}
+      </Text>
       <Text style={styles.rating}>{Number(props.rating).toFixed(1)}</Text>
     </View>
     <View style={styles.restaurantSubtitle}>
@@ -55,8 +59,8 @@ const RestaurantInfo = (props) => (
       <Text>{props.price}</Text>
     </View>
     <View style={styles.restaurantSubtitle}>
-    <Text>{props.review_count} Reviews</Text>
-    <Text>{props.location}</Text> 
+      <Text>{props.review_count} Reviews</Text>
+      <Text>{props.location}</Text>
     </View>
   </View>
 );

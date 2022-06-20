@@ -5,10 +5,10 @@ import styles from "./styles";
 import About from "../../components/RestaurantDetailComponents/About/About.jsx";
 import MenuItems from "../../components/RestaurantDetailComponents/MenuItems/MenuItems.jsx";
 
-function RestaurantDetail() {
+function RestaurantDetail({ route }) {
   return (
     <View style={styles.screen}>
-      <About />
+      <About route={route} />
       <Divider width={2} style={{ marginVertical: 20 }} />
       <MenuItems />
     </View>
