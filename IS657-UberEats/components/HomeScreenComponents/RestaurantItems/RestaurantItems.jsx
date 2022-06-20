@@ -11,11 +11,19 @@ function RestaurantItems({ navigation, ...props }) {
     <>
       {props.restaurantData.map((restaurant, index) => (
         <TouchableOpacity
+          key={index}
           activeOpacity={1}
           style={styles.touchableOpacityContainer}
-          onPress={() => navigation.navigate('RestaurantDetail')}
+          onPress={() => navigation.navigate('RestaurantDetail', {
+            name: restaurant.name,
+            image: restaurant.image_url,
+            price: restaurant.price,
+            reviews: restaurant.review_count,
+            rating: restaurant.rating,
+            categories: restaurant.categories[0].title
+          })}
         >
-          <View key={index} style={styles.restaurantItemContainer}>
+          <View style={styles.restaurantItemContainer}>
             <RestaurantImage image={restaurant.image_url} />
             <RestaurantInfo
               name={restaurant.name}
