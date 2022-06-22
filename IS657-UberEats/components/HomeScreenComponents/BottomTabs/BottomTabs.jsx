@@ -9,7 +9,9 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 
-function BottomTabs() {
+
+export default function BottomTabs({ navigation }) {
+
   return (
     <View style={styles.tabContainer}>
       <TouchableOpacity>
@@ -33,21 +35,25 @@ function BottomTabs() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Orders")}>
         <View style={styles.buttonContainer}>
           <FontAwesome5 name="receipt" size={25} />
           <Text style={styles.text}>Orders</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity>
+
+
+      <TouchableOpacity onPress={() => navigation.navigate("Account")}>
         <View style={styles.buttonContainer}>
           <MaterialCommunityIcons name="account" size={25} />
           <Text style={styles.text}>Account</Text>
         </View>
       </TouchableOpacity>
+
+
     </View>
   );
-}
+};
 
-export default BottomTabs;
+

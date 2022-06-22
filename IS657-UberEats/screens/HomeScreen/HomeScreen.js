@@ -9,6 +9,7 @@ import SearchBar from "../../components/HomeScreenComponents/SearchBar/SearchBar
 import Categories from "../../components/HomeScreenComponents/Categories/Categories.jsx";
 import RestaurantItems from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems.jsx";
 import BottomTabs from "../../components/HomeScreenComponents/BottomTabs/BottomTabs.jsx";
+import Account from "../Account/Account";
 
 const YELP_API_KEY =
   "CKyMAwD-KDXLWtFEPB8us-6hKZIjq3FJkETeyZkOtKvI0VYQyE0MnulRxglSquTltNYjDi2vyzAoKF3eWqipKCqu205pQi72l54fNmRsuLCgME4_OtqaX_iACHauYnYx";
@@ -53,7 +54,8 @@ export default function HomeScreen({ navigation }) {
         />
       </ScrollView>
       <Divider width={1} />
-      <BottomTabs />
+      <BottomTabs
+      navigation={navigation}/>
     </SafeAreaView>
   );
 }

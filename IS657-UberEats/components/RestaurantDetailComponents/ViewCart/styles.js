@@ -6,13 +6,13 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         flexDirection: 'row',
         position: 'absolute',
-        bottom: 40,
+        bottom: 30,
         zIndex: 999,
     },
     subContainer: {
         flexDirection: 'row',
         justifycontent: 'center',
-        marginHorizontal: 15
+        marginHorizontal: 45,
         
     },
     
