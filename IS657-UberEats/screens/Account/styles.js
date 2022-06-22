@@ -3,7 +3,8 @@ import { Dimensions, StyleSheet } from "react-native";
 const styles = StyleSheet.create({
 
     page: {
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        flex: 1
     },
     
 

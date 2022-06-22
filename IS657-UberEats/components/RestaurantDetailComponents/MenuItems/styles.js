@@ -2,7 +2,7 @@ import { StyleSheet, Dimenions, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
     screen: {
-        height: Dimensions.get('screen').height,
+        height: Dimensions.get('window').height,
         
     },   
 

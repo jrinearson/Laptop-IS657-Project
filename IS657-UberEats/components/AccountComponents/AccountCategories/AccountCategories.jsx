@@ -19,19 +19,19 @@ const items = [
 
 export default function AccountCategories() {
   return (
-      <View style={styles.categoryContainer}>
-        {items.map((item, index) => (
-          <View key={index} >
-            <TouchableOpacity>
-              <View style={styles.categoryImageContainer}>
-                <Image style={styles.categoryImage} source={item.image} />
-              </View>
-            </TouchableOpacity>
-            <View style={{alignItems: 'center'}}>
-            <Text style={styles.categoryText}>{item.text}</Text>
+    <View style={styles.categoryContainer}>
+      {items.map((item, index) => (
+        <View key={index}>
+          <TouchableOpacity>
+            <View style={styles.categoryImageContainer}>
+              <Image style={styles.categoryImage} source={item.image} />
             </View>
+          </TouchableOpacity>
+          <View style={{ alignItems: "center" }}>
+            <Text style={styles.categoryText}>{item.text}</Text>
           </View>
-        ))}
-      </View>
+        </View>
+      ))}
+    </View>
   );
 }

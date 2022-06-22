@@ -4,6 +4,8 @@ import SafeAreaView from "react-native-safe-area-view";
 import styles from "./styles";
 import AccountHeader from "../../components/AccountComponents/AccountHeader/AccountHeader.jsx";
 import AccountCategories from "../../components/AccountComponents/AccountCategories/AccountCategories.jsx";
+import AccountBody from "../../components/AccountComponents/AccountBody/AccountBody.jsx";
+import { Divider } from "react-native-elements";
 
 const items = [
   {
@@ -24,7 +26,11 @@ export default function Account() {
   return (
     <SafeAreaView style={styles.page}>
       <AccountHeader />
-      <AccountCategories />
+      <ScrollView>
+        <AccountCategories />
+        <Divider width={"3"} />
+          <AccountBody />
+      </ScrollView>
     </SafeAreaView>
   );
 }

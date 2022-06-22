@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         flexDirection: 'row',
-        paddingHorizontal: 10
+        marginHorizontal: 10,
+        marginVertical: 30,
     },
 
     categoryImage: {
@@ -23,11 +24,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
+        
     },
     
     categoryText: {
         fontSize: 13,
         fontWeight: '500',
+        marginVertical: 10,
     },
 
 });
