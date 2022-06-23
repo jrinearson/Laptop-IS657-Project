@@ -24,9 +24,9 @@ const items = [
 
 export default function Account() {
   return (
-    <SafeAreaView style={styles.page}>
+    <SafeAreaView style={styles.page} >
       <AccountHeader />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <AccountCategories />
         <Divider width={"3"} />
           <AccountBody />

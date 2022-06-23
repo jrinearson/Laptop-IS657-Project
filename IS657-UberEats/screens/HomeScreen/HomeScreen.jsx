@@ -1,5 +1,5 @@
 import { View, ScrollView } from "react-native";
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native";
 import { Divider } from "react-native-elements";
@@ -55,8 +55,7 @@ export default function HomeScreen({ navigation }) {
         />
       </ScrollView>
       <Divider width={1} />
-      <BottomTabs
-      navigation={navigation}/>
+      <BottomTabs navigation={navigation} />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
