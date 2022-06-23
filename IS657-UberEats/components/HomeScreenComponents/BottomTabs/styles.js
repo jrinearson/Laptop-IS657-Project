@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     text: {
         fontSize: 11,
-        fontWeight: '600'
+        fontWeight: '500',
+        marginTop: 5
          
     },
 
@@ -18,6 +19,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         justifyContent: 'center',
         alignItems: 'center',
+       
 
 
     },

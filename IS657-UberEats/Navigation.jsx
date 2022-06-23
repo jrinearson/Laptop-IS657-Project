@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import HomeScreen from "./screens/HomeScreen/HomeScreen.js";
+import HomeScreen from "./screens/HomeScreen/HomeScreen.jsx";
 import RestaurantDetail from "./screens/RestaurantDetail/RestaurantDetail.jsx";
 import Account from "./screens/Account/Account.jsx";
 import Orders from "./screens/Orders/Orders.jsx";

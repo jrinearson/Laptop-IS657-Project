@@ -1,4 +1,5 @@
 import { View, ScrollView } from "react-native";
+import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native";
 import { Divider } from "react-native-elements";
@@ -9,7 +10,7 @@ import SearchBar from "../../components/HomeScreenComponents/SearchBar/SearchBar
 import Categories from "../../components/HomeScreenComponents/Categories/Categories.jsx";
 import RestaurantItems from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems.jsx";
 import BottomTabs from "../../components/HomeScreenComponents/BottomTabs/BottomTabs.jsx";
-import Account from "../Account/Account";
+import Account from "../Account/Account.jsx";
 
 const YELP_API_KEY =
   "CKyMAwD-KDXLWtFEPB8us-6hKZIjq3FJkETeyZkOtKvI0VYQyE0MnulRxglSquTltNYjDi2vyzAoKF3eWqipKCqu205pQi72l54fNmRsuLCgME4_OtqaX_iACHauYnYx";
@@ -56,6 +57,7 @@ export default function HomeScreen({ navigation }) {
       <Divider width={1} />
       <BottomTabs
       navigation={navigation}/>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }

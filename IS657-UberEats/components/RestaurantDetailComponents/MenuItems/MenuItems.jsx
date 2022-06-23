@@ -4,7 +4,6 @@ import styles from "./styles";
 import { Divider } from "react-native-elements";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
-
 const foods = [
   {
     title: "Bacon Bourbonator Burger",
@@ -47,31 +46,28 @@ export default function MenuItems() {
         <View key={index} style={styles.foodItemContainer}>
           <BouncyCheckbox
             fillColor="#06C167"
-            iconStyle={{borderColor: 'lightgray', borderRadius: 5}}
+            iconStyle={{ borderColor: "lightgray", borderRadius: 5 }}
           />
           <FoodInfo food={food} />
-          <Divider width={2}/>
+          <Divider width={2} />
         </View>
       ))}
-      
     </ScrollView>
   );
 }
 
 const FoodInfo = (props) => (
-  
-    <View style={styles.menuItemContainer}>
-      <View style={styles.titleContainer}>
+  <View style={styles.menuItemContainer}>
+    <View style={styles.titleContainer}>
       <TouchableOpacity>
         <Text style={styles.titleText}>{props.food.title}</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.priceContainer}>
-        <Text>{props.food.price}</Text>
-      </View>
-      <View>
-        <Text>{props.food.description}</Text>
-      </View>
+      </TouchableOpacity>
     </View>
-  
+    <View style={styles.priceContainer}>
+      <Text>{props.food.price}</Text>
+    </View>
+    <View>
+      <Text>{props.food.description}</Text>
+    </View>
+  </View>
 );

@@ -66,8 +66,8 @@ export default function AccountBody() {
             <View style={styles.bodyTextContainer}>
               <View style={styles.iconContainer}>
                 <FontAwesome5 name={item.icon} size={20} />
-                </View>
-                <View style={{alignitems: 'flex-start', marginLeft: 30}}>
+              </View>
+              <View style={{ alignitems: "flex-start", marginLeft: 30 }}>
                 <Text style={styles.bodyText}>{item.text}</Text>
               </View>
             </View>
