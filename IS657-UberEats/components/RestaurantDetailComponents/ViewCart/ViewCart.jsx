@@ -1,10 +1,12 @@
 import { View, Text } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, Modal } from "react-native";
 import { useSelector } from "react-redux";
 
 export default function ViewCart({ navigation }) {
+  const [modalVisible, setModalVisible] = useState(false);
+
   const { items, restaurantName } = useSelector(
     (state) => state.cartReducer.selectedItems
   );
@@ -20,12 +22,37 @@ export default function ViewCart({ navigation }) {
 
   console.log(totalUSD);
 
+  const checkoutModalContent = () => {
+    return (
+      <View style={styles.checkoutContainer}>
+        <View style={{ alignContent: "center" }}>
+          <TouchableOpacity onPress={() => setModalVisible(false)}>
+            <View style={styles.checkoutButton}>
+              <Text style={styles.checkoutButtonText}>Checkout</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  };
+
   return (
     <>
+      <Modal
+        animationType="slide"
+        visible={modalVisible}
+        transparent={true}
+        onRequestClose={() => setModalVisible(false)}
+      >
+        {checkoutModalContent()}
+      </Modal>
       {total ? (
         <View style={styles.container}>
           <View style={styles.subContainer}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => setModalVisible(true)}
+            >
               <View style={styles.buttonTextContainer}>
                 <Text style={styles.buttonText}>View Cart</Text>
               </View>

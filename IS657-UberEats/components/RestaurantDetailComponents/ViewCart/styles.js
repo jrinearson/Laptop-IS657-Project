@@ -1,42 +1,63 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignContent: "center",
+    flexDirection: "row",
+    position: "absolute",
+    bottom: 30,
+    zIndex: 999,
+  },
+  subContainer: {
+    flexDirection: "row",
+    marginHorizontal: 20,
+  },
+  button: {
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    marginTop: 20,
+    alignItems: "center",
+    padding: 15,
+    borderRadius: 30,
+    width: "100%",
+    position: "relative",
+    justifyContent: "flex-end",
+    flexDirection: "row",
+  },
 
-    container: {
-        flex: 1,
-        alignContent: 'center',
-        flexDirection: 'row',
-        position: 'absolute',
-        bottom: 30,
-        zIndex: 999,
-    },
-    subContainer: {
-        flexDirection: 'row',
-        marginHorizontal: 20,
-        
-    },
-    button: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        marginTop: 20,
-        alignItems: 'center',
-        padding: 15,
-        borderRadius: 30,
-        width: '100%',
-        position: 'relative',
-        justifyContent: 'flex-end',
-        flexDirection: 'row'
-        
-    },
+  buttonTextContainer: {
+    flex: 1,
+    alignItems: "center",
+    marginHorizontal: 20,
+  },
 
-    buttonTextContainer: {
-        flex: 1, 
-        alignItems: "center",
-    },
+  buttonText: {
+    color: "white",
+    fontWeight: "600",
+  },
 
-    buttonText: {
-        color: 'white',
-        fontWeight: '600'
-    },
+  checkoutContainer: {
+    flex: 1,
+    justifyContent: "center",
+    width: "100%",
+    paddingHorizontal: 20,
+  },
 
+  checkoutButton: {
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    marginTop: 20,
+    alignItems: "center",
+    padding: 15,
+    borderRadius: 30,
+    width: "100%",
+    position: "relative",
+    justifyContent: "center",
+    flexDirection: "row",
+  },
+
+  checkoutButtonText: {
+    color: "white",
+    fontWeight: "600",
+  },
 });
 
 export default styles;
