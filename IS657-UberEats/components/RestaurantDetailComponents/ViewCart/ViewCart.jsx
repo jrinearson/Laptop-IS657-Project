@@ -18,15 +18,26 @@ export default function ViewCart({ navigation }) {
     currency: "USD",
   });
 
-  console.log(totalUSD)
+  console.log(totalUSD);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.subContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>View Cart</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    <>
+      {total ? (
+        <View style={styles.container}>
+          <View style={styles.subContainer}>
+            <TouchableOpacity style={styles.button}>
+              <View style={styles.buttonTextContainer}>
+                <Text style={styles.buttonText}>View Cart</Text>
+              </View>
+              <View style={styles.buttonTextContainer}>
+                <Text style={styles.buttonText}>{totalUSD}</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      ) : (
+        <></>
+      )}
+    </>
   );
 }

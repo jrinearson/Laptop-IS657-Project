@@ -11,21 +11,27 @@ const styles = StyleSheet.create({
     },
     subContainer: {
         flexDirection: 'row',
-        justifycontent: 'center',
-        marginHorizontal: 45,
+        marginHorizontal: 20,
         
     },
-    
     button: {
-        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
         marginTop: 20,
         alignItems: 'center',
         padding: 15,
         borderRadius: 30,
         width: '100%',
         position: 'relative',
+        justifyContent: 'flex-end',
+        flexDirection: 'row'
         
     },
+
+    buttonTextContainer: {
+        flex: 1, 
+        alignItems: "center",
+    },
+
     buttonText: {
         color: 'white',
         fontWeight: '600'
