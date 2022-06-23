@@ -35,11 +35,17 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
 
-  checkoutContainer: {
+  modalContainer: {
     flex: 1,
-    justifyContent: "center",
-    width: "100%",
+    justifyContent: "flex-end",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+  },
+
+  checkoutContainer: {
+    backgroundColor: "white",
     paddingHorizontal: 20,
+    height: '50%',
+    borderWidth: 1,
   },
 
   checkoutButton: {
@@ -52,11 +58,23 @@ const styles = StyleSheet.create({
     position: "relative",
     justifyContent: "center",
     flexDirection: "row",
+    
   },
 
   checkoutButtonText: {
     color: "white",
     fontWeight: "600",
+  },
+
+  subtotalContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 15,
+  },
+
+  subtotalText: {
+    textAlign: "left",
+    marginBottom: 10,
   },
 });
 

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "./styles";
 import { TouchableOpacity, Modal } from "react-native";
 import { useSelector } from "react-redux";
+import OrderItems from "../OrderItems/OrderItems.jsx";
 
 export default function ViewCart({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -24,14 +25,22 @@ export default function ViewCart({ navigation }) {
 
   const checkoutModalContent = () => {
     return (
-      <View style={styles.checkoutContainer}>
-        <View style={{ alignContent: "center" }}>
+      <View style={styles.modalContainer}>
+        <View style={styles.checkoutContainer}>
+          <Text>{restaurantName}</Text>
+
+          <View style={styles.subtotalContainer}>
+            <Text style={styles.subtotalText}>Subtotal</Text>
+            <Text>{totalUSD}</Text>
+          </View>
+          
           <TouchableOpacity onPress={() => setModalVisible(false)}>
             <View style={styles.checkoutButton}>
               <Text style={styles.checkoutButtonText}>Checkout</Text>
-            </View>
+              </View>
           </TouchableOpacity>
         </View>
+
       </View>
     );
   };
