@@ -7,6 +7,7 @@ import Account from "./screens/Account/Account.jsx";
 import Orders from "./screens/Orders/Orders.jsx";
 import { Provider as ReduxProvider } from "react-redux";
 import configureStore from "./Redux/Store.jsx";
+import OrderComplete from "./screens/OrderComplete/OrderComplete.jsx";
 
 const store = configureStore();
 
@@ -25,6 +26,7 @@ export default function RootNavigation() {
           <Stack.Screen name="RestaurantDetail" component={RestaurantDetail} />
           <Stack.Screen name="Account" component={Account} />
           <Stack.Screen name="Orders" component={Orders} />
+          <Stack.Screen name="OrderComplete" component={OrderComplete} />
         </Stack.Navigator>
       </NavigationContainer>
     </ReduxProvider>
