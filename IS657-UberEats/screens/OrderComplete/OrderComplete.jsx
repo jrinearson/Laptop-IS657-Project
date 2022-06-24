@@ -1,14 +1,12 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Dimensions } from "react-native";
 import React, { useEffect } from "react";
 import styles from "./styles";
 import { useSelector } from "react-redux";
 import { SafeAreaView } from "react-native-safe-area-context";
-import LottieView from "lottie-react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import firebase from "firebase";
 import { useState } from "react";
 import MenuItems from "../../components/RestaurantDetailComponents/MenuItems/MenuItems.jsx";
-
 
 export default function OrderComplete() {
   const [lastOrder, setLastOrder] = useState({
@@ -53,28 +51,40 @@ export default function OrderComplete() {
 
   return (
     <SafeAreaView style={styles.page}>
-      <View
-        style={{
-        
-          margin: 15,
-          alignItems: "center",
-          height: "100%",
-          
-        }}
-      >
-        <Image source={require("../../assets/images/greencheckmark.jpg")} style={{height: 80, width: 80}} />
-        <Text>
-          Your order at {restaurantName} has been placed for {totalUSD}
-        </Text>
-
-        <ScrollView>
-          <MenuItems foods={lastOrder.items} hideCheckbox={true} />
-          <LottieView
-            style={styles.cooking}
-            source={require("../../assets/animations/cooking01.json")}
-            autoPlay
-            speed={0.5}
+      <View style={styles.header}>
+        <Image
+          source={require("../../assets/images/greencheckmark.jpg")}
+          style={{ height: 90, width: 90 }}
+        />
+      </View>
+      <View style={styles.body}>
+        <View style={styles.orderPlacedContainer}>
+          <Text style={styles.orderPlacedText}>
+            Your order at {restaurantName} has been placed for {totalUSD}
+          </Text>
+        </View>
+        <View style={{ flexDirection: "row", justifyContent: 'space-between' }}>
+          <Image
+            source={require("../../assets/images/yaranaika.png")}
+            style={{ height: 100, width: 100 }}
           />
+          <Image
+            source={require("../../assets/images/yaranaika.png")}
+            style={{ height: 100, width: 100 }}
+          />
+          <Image
+            source={require("../../assets/images/yaranaika.png")}
+            style={{ height: 100, width: 100 }}
+          />
+        </View>
+
+        <ScrollView
+          style={{ width: "100%" }}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={{ height: Dimensions.get("window").height }}>
+            <MenuItems foods={lastOrder.items} hideCheckbox={true} />
+          </View>
         </ScrollView>
       </View>
     </SafeAreaView>
