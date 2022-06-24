@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 const foods = [
   {
-    title: "Bacon Bourbonator Burger",
+    title: "Bacon Burger",
     description:
       "Angus beef patty, thick cut bacon, blue cheese crumbles, bacon & onion jam, side of fries",
     price: "$20.00",
@@ -16,7 +16,7 @@ const foods = [
       "https://s3-media0.fl.yelpcdn.com/bphoto/HjJvsO_7dTbKfpequbx05g/o.jpg",
   },
   {
-    title: 'Red Hot "Morrison" Wings',
+    title: 'Red Hot Wings',
     description:
       "7 breaded tasty wings tossed in our very own Morrison hot sauce served w/fries & ranch",
     price: "$16.00",

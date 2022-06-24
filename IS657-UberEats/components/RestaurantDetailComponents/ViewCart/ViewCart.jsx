@@ -27,20 +27,26 @@ export default function ViewCart({ navigation }) {
     return (
       <View style={styles.modalContainer}>
         <View style={styles.checkoutContainer}>
-          <Text>{restaurantName}</Text>
-
+          <Text style={styles.restaurantNameText}>{restaurantName}</Text>
+          <View style={styles.orderItemContainer}>
+          {items.map((item, index) => (
+            <OrderItems key={index} item={item} />
+          ))}
+          </View>
           <View style={styles.subtotalContainer}>
             <Text style={styles.subtotalText}>Subtotal</Text>
-            <Text>{totalUSD}</Text>
+            <Text style={styles.subtotalText}>{totalUSD}</Text>
           </View>
-          
-          <TouchableOpacity onPress={() => setModalVisible(false)}>
-            <View style={styles.checkoutButton}>
-              <Text style={styles.checkoutButtonText}>Checkout</Text>
+          <TouchableOpacity style={styles.checkoutButton} onPress={() => setModalVisible(false)}>
+          <View style={styles.buttonTextContainer}>
+                <Text style={styles.buttonText}>Checkout</Text>
               </View>
+              <View style={styles.buttonTextContainer}>
+                <Text style={styles.buttonText}>{totalUSD}</Text>
+              </View>
+            
           </TouchableOpacity>
         </View>
-
       </View>
     );
   };

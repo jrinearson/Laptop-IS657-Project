@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
   subContainer: {
     flexDirection: "row",
-    marginHorizontal: 20,
+    marginHorizontal: 15,
   },
   button: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -43,9 +43,29 @@ const styles = StyleSheet.create({
 
   checkoutContainer: {
     backgroundColor: "white",
-    paddingHorizontal: 20,
-    height: '50%',
+    paddingHorizontal: 15,
+    height: "60%",
     borderWidth: 1,
+    alignItems: "center",
+  },
+
+  restaurantNameText: {
+    marginTop: 20,
+    textAlign: "center",
+    fontSize: 16,
+    fontWeight: "700",
+  },
+
+  orderItemContainer: {
+    justifyContent: "space-between",
+    width: "100%",
+  },
+
+  subtotalContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 15,
+    width: "90%",
   },
 
   checkoutButton: {
@@ -58,23 +78,15 @@ const styles = StyleSheet.create({
     position: "relative",
     justifyContent: "center",
     flexDirection: "row",
-    
   },
-
   checkoutButtonText: {
     color: "white",
     fontWeight: "600",
   },
 
-  subtotalContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 15,
-  },
-
   subtotalText: {
-    textAlign: "left",
     marginBottom: 10,
+    fontWeight: '600'
   },
 });
 
