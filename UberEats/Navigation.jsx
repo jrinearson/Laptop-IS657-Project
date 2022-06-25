@@ -33,3 +33,5 @@ export default function RootNavigation() {
     </ReduxProvider>
   );
 }
+
+// some comments
