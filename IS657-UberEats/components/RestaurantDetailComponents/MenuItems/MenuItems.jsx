@@ -34,7 +34,7 @@ export default function MenuItems({
     Boolean(cartItems.find((item) => item.title === food.title));
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1, paddingBottom: 60}}>
       {foods.map((food, index) => (
         <View key={index} style={styles.foodItemContainer}>
           {hideCheckbox ? (
@@ -58,9 +58,9 @@ export default function MenuItems({
 const FoodInfo = (props) => (
   <View style={styles.menuItemContainer}>
     <View style={styles.titleContainer}>
-      <TouchableOpacity>
+      
         <Text style={styles.titleText}>{props.food.title}</Text>
-      </TouchableOpacity>
+      
     </View>
     <View style={styles.priceContainer}>
       <Text>{props.food.price}</Text>

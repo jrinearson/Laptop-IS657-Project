@@ -8,36 +8,62 @@ import ViewCart from "../../components/RestaurantDetailComponents/ViewCart/ViewC
 
 const foods = [
   {
-    title: "Bacon Burger",
+    title: "Truffle Parmesean Fries",
+    description: "Truffle shavings, grainy mustard aioli, chives",
+    price: "$12.00",
+  },
+  {
+    title: "Roast Corn Guacamole",
     description:
-      "Angus beef patty, thick cut bacon, blue cheese crumbles, bacon & onion jam served w/side of fries",
-    price: "$20.00",
-    image:
-      "https://s3-media0.fl.yelpcdn.com/bphoto/HjJvsO_7dTbKfpequbx05g/o.jpg",
+      "Cilantro, fresh lime, cherry tomatoes, serranos, feta cheese, warm tortilla chips",
+    price: "$14.50",
+  },
+  {
+    title: "Korean Fried Cauliflower",
+    description: "Sweet spicy Korean chili miso paste, toasted sesame seeds",
+    price: "$14.50",
   },
   {
     title: "Red Hot Wings",
-    description:
-      "7 breaded tasty wings tossed in our very own hot sauce served w/fries & ranch",
+    description: "Homemade sauce, blue cheese, carrots",
     price: "$16.00",
-    image:
-      "https://s3-media0.fl.yelpcdn.com/bphoto/YH5RNa8atwllfP6yym5BnA/o.jpg",
-  },
-  {
-    title: "Rib Eye Steak",
-    description:
-      "Half pound rib eye steak served w/side of mashed potatoes",
-    price: "$27.00",
-    image:
-      "https://s3-media0.fl.yelpcdn.com/bphoto/8fJF2G52Y9XhUsNvi5SsvQ/o.jpg",
   },
   {
     title: "Onion Rings",
     description:
-      "Homemade beer batter, hand-cut onion rings, served w/house crafted bbq sauce ",
+      "Homemade beer batter, hand-cut onion rings, house crafted BBQ sauce",
     price: "$10.00",
-    image:
-      "https://s3-media0.fl.yelpcdn.com/bphoto/2XlMm1ZoA7yx8GmYCL9iPw/o.jpg",
+  },
+  {
+    title: "Bacon Burger",
+    description:
+      "Angus beef patty, thick cut bacon, blue cheese crumbles, bacon & onion jam served, handcut fries",
+    price: "$20.00",
+  },
+  {
+    title: "Black Truffle Ravioli",
+    description: "Shrimp, truffle beurre blanc, grana padano",
+    price: "$33.00",
+  },
+  {
+    title: "Rib Eye Steak",
+    description: "Sauce béarnaise, whipped potatoes ",
+    price: "$27.00",
+  },
+  {
+    title: "Sake Glazed Chilean Sea Bass",
+    description: "Wok-fired vegetables, gold potatoes, dashi broth",
+    price: "$43.00",
+  },
+  {
+    title: "Crème Brûlée Cheesecake",
+    description: "Fresh strawberry compote, whipped cream",
+    price: "$14.00",
+  },
+  {
+    title: "Molten Chocolate Cake",
+    description: "Fresh raspberries, tahitian vanilla ice cream",
+    price: "$14.50",
   },
 ];
 
@@ -46,8 +72,8 @@ export default function RestaurantDetail({ route, navigation }) {
     <View style={styles.screen}>
       <About route={route} />
       <Divider width={2} style={{ marginVertical: 20 }} />
-      <MenuItems restaurantName={route.params.name} foods={foods}/>
-        <ViewCart navigation={navigation} />
+      <MenuItems restaurantName={route.params.name} foods={foods} />
+      <ViewCart navigation={navigation} />
     </View>
   );
 }

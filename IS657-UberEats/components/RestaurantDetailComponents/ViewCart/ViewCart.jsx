@@ -5,6 +5,7 @@ import { TouchableOpacity, Modal } from "react-native";
 import { useSelector } from "react-redux";
 import OrderItems from "../OrderItems/OrderItems.jsx";
 import firebase from "../../../Firebase.js";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function ViewCart({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -23,16 +24,14 @@ export default function ViewCart({ navigation }) {
   });
 
   const addOrderToFireBase = () => {
-    
     const db = firebase.firestore();
-    db.collection("orders")
-      .add({
-        items: items,
-        restaurantName: restaurantName,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      });
-      setModalVisible(false);
-      navigation.navigate("OrderComplete");
+    db.collection("orders").add({
+      items: items,
+      restaurantName: restaurantName,
+      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    setModalVisible(false);
+    navigation.navigate("OrderComplete");
   };
 
   console.log(totalUSD);
@@ -40,27 +39,36 @@ export default function ViewCart({ navigation }) {
   const checkoutModalContent = () => {
     return (
       <View style={styles.modalContainer}>
+        <TouchableOpacity
+          style={{ height: "40%" }}
+          activeOpacity={1}
+          onPress={() => setModalVisible(false)}
+        ></TouchableOpacity>
+        <ScrollView>
         <View style={styles.checkoutContainer}>
           <Text style={styles.restaurantNameText}>{restaurantName}</Text>
           <View style={styles.orderItemContainer}>
-          {items.map((item, index) => (
-            <OrderItems key={index} item={item} />
-          ))}
+            {items.map((item, index) => (
+              <OrderItems key={index} item={item} />
+            ))}
           </View>
           <View style={styles.subtotalContainer}>
             <Text style={styles.subtotalText}>Subtotal</Text>
             <Text style={styles.subtotalText}>{totalUSD}</Text>
           </View>
-          <TouchableOpacity style={styles.checkoutButton} onPress={() => addOrderToFireBase()}>
-          <View style={styles.buttonTextContainer}>
-                <Text style={styles.buttonText}>Checkout</Text>
-              </View>
-              <View style={styles.buttonTextContainer}>
-                <Text style={styles.buttonText}>{totalUSD}</Text>
-              </View>
-            
+          <TouchableOpacity
+            style={styles.checkoutButton}
+            onPress={() => addOrderToFireBase()}
+          >
+            <View style={styles.buttonTextContainer}>
+              <Text style={styles.buttonText}>Checkout</Text>
+            </View>
+            <View style={styles.buttonTextContainer}>
+              <Text style={styles.buttonText}>{totalUSD}</Text>
+            </View>
           </TouchableOpacity>
         </View>
+        </ScrollView>
       </View>
     );
   };
@@ -72,9 +80,8 @@ export default function ViewCart({ navigation }) {
         visible={modalVisible}
         transparent={true}
         onRequestClose={() => setModalVisible(false)}
-        
-        >
-       {checkoutModalContent()}
+      >
+        {checkoutModalContent()}
       </Modal>
       {total ? (
         <View style={styles.container}>

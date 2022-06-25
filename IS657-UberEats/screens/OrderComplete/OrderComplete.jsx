@@ -1,4 +1,4 @@
-import { View, Text, Image, Dimensions } from "react-native";
+import { View, Text, Image, Dimensions, TouchableOpacity } from "react-native";
 import React, { useEffect } from "react";
 import styles from "./styles";
 import { useSelector } from "react-redux";
@@ -8,17 +8,9 @@ import firebase from "firebase";
 import { useState } from "react";
 import MenuItems from "../../components/RestaurantDetailComponents/MenuItems/MenuItems.jsx";
 
-export default function OrderComplete() {
+export default function OrderComplete({ navigation }) {
   const [lastOrder, setLastOrder] = useState({
-    items: [
-      {
-        title: "Bologna",
-        description: "With butter lettuce, tomato and sauce bechamel",
-        price: "$13.50",
-        image:
-          "https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg",
-      },
-    ],
+    items: [],
   });
 
   const { items, restaurantName } = useSelector(
@@ -52,41 +44,41 @@ export default function OrderComplete() {
   return (
     <SafeAreaView style={styles.page}>
       <View style={styles.header}>
-        <Image
-          source={require("../../assets/images/greencheckmark.jpg")}
-          style={{ height: 90, width: 90 }}
-        />
+        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+          <Image
+            source={require("../../assets/images/yaranaika.png")}
+            style={{ height: 100, width: 100 }}
+          />
+          <Image
+            source={require("../../assets/images/yaranaika.png")}
+            style={{ height: 100, width: 100 }}
+          />
+          <Image
+            source={require("../../assets/images/yaranaika.png")}
+            style={{ height: 100, width: 100 }}
+          />
+        </View>
       </View>
-      <View style={styles.body}>
-        <View style={styles.orderPlacedContainer}>
-          <Text style={styles.orderPlacedText}>
-            Your order at {restaurantName} has been placed for {totalUSD}
-          </Text>
-        </View>
-        <View style={{ flexDirection: "row", justifyContent: 'space-between' }}>
-          <Image
-            source={require("../../assets/images/yaranaika.png")}
-            style={{ height: 100, width: 100 }}
-          />
-          <Image
-            source={require("../../assets/images/yaranaika.png")}
-            style={{ height: 100, width: 100 }}
-          />
-          <Image
-            source={require("../../assets/images/yaranaika.png")}
-            style={{ height: 100, width: 100 }}
-          />
-        </View>
-
-        <ScrollView
-          style={{ width: "100%" }}
-          showsVerticalScrollIndicator={false}
+      <View style={styles.orderPlacedContainer}>
+        <Text style={styles.orderPlacedText}>
+          Your order at {restaurantName} has been placed for {totalUSD}
+        </Text>
+      </View>
+      <View style={styles.checkoutButtonContainer}>
+        <TouchableOpacity
+          style={styles.checkoutButton}
+          onPress={() => navigation.navigate("Home")}
         >
-          <View style={{ height: Dimensions.get("window").height }}>
-            <MenuItems foods={lastOrder.items} hideCheckbox={true} />
-          </View>
-        </ScrollView>
+          <Text style={styles.buttonText}>Start New Order 🔥</Text>
+        </TouchableOpacity>
       </View>
+      <ScrollView
+        style={{ width: "100%" }}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ flexGrow: 1, paddingBottom: 300 }}
+      >
+        <MenuItems foods={lastOrder.items} hideCheckbox={true} />
+      </ScrollView>
     </SafeAreaView>
   );
 }

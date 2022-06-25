@@ -11,9 +11,6 @@ import Categories from "../../components/HomeScreenComponents/Categories/Categor
 import RestaurantItems from "../../components/HomeScreenComponents/RestaurantItems/RestaurantItems.jsx";
 import BottomTabs from "../../components/HomeScreenComponents/BottomTabs/BottomTabs.jsx";
 
-
-
-
 const YELP_API_KEY =
   "CKyMAwD-KDXLWtFEPB8us-6hKZIjq3FJkETeyZkOtKvI0VYQyE0MnulRxglSquTltNYjDi2vyzAoKF3eWqipKCqu205pQi72l54fNmRsuLCgME4_OtqaX_iACHauYnYx";
 

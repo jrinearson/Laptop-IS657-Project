@@ -44,9 +44,11 @@ const styles = StyleSheet.create({
   checkoutContainer: {
     backgroundColor: "white",
     paddingHorizontal: 15,
-    height: "60%",
+    height: "1000%",
     borderWidth: 1,
     alignItems: "center",
+    marginBottom: 30
+
   },
 
   restaurantNameText: {
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
   },
 
   checkoutButton: {
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backgroundColor: "black",
     marginTop: 20,
     alignItems: "center",
     padding: 15,
@@ -78,6 +80,7 @@ const styles = StyleSheet.create({
     position: "relative",
     justifyContent: "center",
     flexDirection: "row",
+    
   },
   checkoutButtonText: {
     color: "white",

@@ -2,10 +2,7 @@ import { Dimensions, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   page: {
-    flex: 1,
     backgroundColor: "white",
-    width: "100%",
-    height: Dimensions.get("window").height,
   },
 
   header: {
@@ -16,30 +13,39 @@ const styles = StyleSheet.create({
   body: {
     margin: 15,
     alignItems: "center",
-    height: "100%",
     marginTop: 15,
   },
 
   orderPlacedContainer: {
     marginBottom: 15,
+    marginHorizontal: 15,
   },
 
   orderPlacedText: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "500",
   },
 
-  checkbox: {
-    height: 100,
-    alignSelf: "center",
-    marginBottom: 30,
+  checkoutButtonContainer: {
+    marginHorizontal: 15,
   },
 
-  cooking: {
-    height: 150,
-    alignSelf: "center",
-    marginBottom: 30,
-    width: 900,
+  checkoutButton: {
+    backgroundColor: "black",
+    marginTop: 20,
+    marginBottom: 40,
+    alignItems: "center",
+    padding: 15,
+    borderRadius: 30,
+    width: "100%",
+    position: "relative",
+    justifyContent: "center",
+    flexDirection: "row",
+  },
+
+  buttonText: {
+    color: "white",
+    fontWeight: "600",
   },
 });
 

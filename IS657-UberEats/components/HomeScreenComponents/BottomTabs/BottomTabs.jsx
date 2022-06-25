@@ -35,7 +35,7 @@ export default function BottomTabs({ navigation }) {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Orders")}>
+      <TouchableOpacity>
         <View style={styles.buttonContainer}>
           <FontAwesome5 name="receipt" size={25} />
           <Text style={styles.text}>Orders</Text>
