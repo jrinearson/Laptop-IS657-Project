@@ -1,6 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import {createStackNavigator} from '@react-navigation/stack';
+import {createAppContainer} from '@react-navigation/native'; 
 import HomeScreen from "./screens/HomeScreen/HomeScreen.jsx";
 import RestaurantDetail from "./screens/RestaurantDetail/RestaurantDetail.jsx";
 import Account from "./screens/Account/Account.jsx";
@@ -26,7 +27,6 @@ export default function RootNavigation() {
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="RestaurantDetail" component={RestaurantDetail} />
           <Stack.Screen name="Account" component={Account} />
-          <Stack.Screen name="Orders" component={Orders} />
           <Stack.Screen name="OrderComplete" component={OrderComplete} />
         </Stack.Navigator>
       </NavigationContainer>
@@ -34,4 +34,3 @@ export default function RootNavigation() {
   );
 }
 
-// some comments
