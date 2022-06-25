@@ -13,7 +13,7 @@ const foods = [
     price: "$12.00",
   },
   {
-    title: "Roast Corn Guacamole",
+    title: "Roasted Corn Guacamole",
     description:
       "Cilantro, fresh lime, cherry tomatoes, serranos, feta cheese, warm tortilla chips",
     price: "$14.50",
