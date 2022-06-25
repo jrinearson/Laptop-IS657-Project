@@ -37,6 +37,7 @@
     "react-native-web": "0.17.7",
     "react-redux": "7.2.5",
     "reanimated-bottom-sheet": "1.0.0-alpha.22",
+    "redux": "^4.2.0",
     "tslib": "^2.4.0"
   },
   "devDependencies": {
