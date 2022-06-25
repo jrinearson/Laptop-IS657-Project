@@ -2,16 +2,12 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import styles from "./styles";
 import {
-  Ionicons,
-  AntDesign,
   MaterialIcons,
   FontAwesome5,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 
-
 export default function BottomTabs({ navigation }) {
-
   return (
     <View style={styles.tabContainer}>
       <TouchableOpacity>
@@ -31,7 +27,7 @@ export default function BottomTabs({ navigation }) {
       <TouchableOpacity>
         <View style={styles.buttonContainer}>
           <MaterialIcons name="local-grocery-store" size={25} />
-          <Text style={styles.text}>Grocery</Text>
+          <Text style={styles.text}>Cart</Text>
         </View>
       </TouchableOpacity>
 
@@ -42,18 +38,12 @@ export default function BottomTabs({ navigation }) {
         </View>
       </TouchableOpacity>
 
-
-
       <TouchableOpacity onPress={() => navigation.navigate("Account")}>
         <View style={styles.buttonContainer}>
           <MaterialCommunityIcons name="account" size={25} />
           <Text style={styles.text}>Account</Text>
         </View>
       </TouchableOpacity>
-
-
     </View>
   );
-};
-
-
+}

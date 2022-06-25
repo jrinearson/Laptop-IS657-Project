@@ -1,12 +1,10 @@
-import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import styles from "./styles";
 import { Divider } from "react-native-elements";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-
-
 
 export default function MenuItems({
   restaurantName,
@@ -34,7 +32,10 @@ export default function MenuItems({
     Boolean(cartItems.find((item) => item.title === food.title));
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1, paddingBottom: 60}}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ flexGrow: 1, paddingBottom: 60 }}
+    >
       {foods.map((food, index) => (
         <View key={index} style={styles.foodItemContainer}>
           {hideCheckbox ? (
@@ -58,9 +59,7 @@ export default function MenuItems({
 const FoodInfo = (props) => (
   <View style={styles.menuItemContainer}>
     <View style={styles.titleContainer}>
-      
-        <Text style={styles.titleText}>{props.food.title}</Text>
-      
+      <Text style={styles.titleText}>{props.food.title}</Text>
     </View>
     <View style={styles.priceContainer}>
       <Text>{props.food.price}</Text>

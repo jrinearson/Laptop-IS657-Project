@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import React from "react";
 import SafeAreaView from "react-native-safe-area-view";
 import styles from "./styles";
@@ -24,12 +24,12 @@ const items = [
 
 export default function Account() {
   return (
-    <SafeAreaView style={styles.page} >
+    <SafeAreaView style={styles.page}>
       <AccountHeader />
       <ScrollView showsVerticalScrollIndicator={false}>
         <AccountCategories />
         <Divider width={"3"} />
-          <AccountBody />
+        <AccountBody />
       </ScrollView>
     </SafeAreaView>
   );

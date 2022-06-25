@@ -1,9 +1,8 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import styles from "./styles";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Divider } from "react-native-elements";
 
 export const restaurants = [];
 

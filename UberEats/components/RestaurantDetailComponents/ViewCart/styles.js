@@ -47,8 +47,7 @@ const styles = StyleSheet.create({
     height: "1000%",
     borderWidth: 1,
     alignItems: "center",
-    marginBottom: 30
-
+    marginBottom: 30,
   },
 
   restaurantNameText: {
@@ -80,7 +79,6 @@ const styles = StyleSheet.create({
     position: "relative",
     justifyContent: "center",
     flexDirection: "row",
-    
   },
   checkoutButtonText: {
     color: "white",
@@ -89,7 +87,7 @@ const styles = StyleSheet.create({
 
   subtotalText: {
     marginBottom: 10,
-    fontWeight: '600'
+    fontWeight: "600",
   },
 });
 
